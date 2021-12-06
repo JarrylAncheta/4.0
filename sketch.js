@@ -51,7 +51,7 @@ function keyPressed() {
 }
 function title() {
   background(200);
-  textSize(75);
+  textSize(60);
   textAlign(CENTER);
   text("Jarryl's Game", w / 2, h / 5);
   textSize(30);
