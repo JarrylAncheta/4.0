@@ -2,11 +2,12 @@
 
 let state = "title";
 let cnv;
+let player;
+let coin;
 let points = 0;
 let w = 600;
 let h = 600;
-let player;
-let coin;
+
 
 
 function setup() {
@@ -36,10 +37,9 @@ function draw() {
   }
 }
 function keyPressed() {
-
-  } else if (keyCode == RIGHT_ARROW) {
+  if (keyCode == RIGHT_ARROW) {
     player.direction = 'right'
-    else if (keyCode == LEFT_ARROW) {
+  } else if (keyCode == LEFT_ARROW) {
     player.direction = 'left'
   } else if (keyCode == UP_ARROW) {
     player.direction = 'up'
@@ -51,7 +51,7 @@ function keyPressed() {
 }
 function title() {
   background(200);
-  textSize(80);
+  textSize(75);
   textAlign(CENTER);
   text("Jarryl's Game", w / 2, h / 5);
   textSize(30);
@@ -66,7 +66,7 @@ function titleMouseClicked() {
 }
 
 function level1() {
-  background(20, 200, 400);
+  background(100, 50, 800);
   text('click for points', w / 2, h / 2);
   player.display();
   player.move();
@@ -84,13 +84,8 @@ function level1MouseClicked() {
   }
 }
 
-function youWinMouseClicked() {
-  state = 'level 1';
-  points = 0;
-}
-
 function youWin() {
-  background(255, 90, 100);
+  background(255, 220, 600);
   textSize(80);
   text('You Win', w / 2, h / 5);
   textSize(30);
@@ -99,3 +94,7 @@ function youWin() {
 
 }
 
+function youWinMouseClicked() {
+  state = 'level 1';
+  points = 0;
+}
