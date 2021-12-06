@@ -53,7 +53,7 @@ function title() {
   background(200);
   textSize(80);
   textAlign(CENTER);
-  text("MY GAME", w / 2, h / 5);
+  text("Jarryl's Game", w / 2, h / 5);
   textSize(30);
   text("click anywhere to start", w / 2, h / 2);
 
