@@ -36,10 +36,11 @@ function draw() {
   }
 }
 function keyPressed() {
-  if (keyCode == LEFT_ARROW) {
-    player.direction = 'left'
+
   } else if (keyCode == RIGHT_ARROW) {
     player.direction = 'right'
+    else if (keyCode == LEFT_ARROW) {
+    player.direction = 'left'
   } else if (keyCode == UP_ARROW) {
     player.direction = 'up'
   } else if (keyCode == DOWN_ARROW) {
@@ -49,7 +50,7 @@ function keyPressed() {
   }
 }
 function title() {
-  background(100);
+  background(200);
   textSize(80);
   textAlign(CENTER);
   text("MY GAME", w / 2, h / 5);
@@ -65,7 +66,7 @@ function titleMouseClicked() {
 }
 
 function level1() {
-  background(50, 100, 200);
+  background(20, 200, 400);
   text('click for points', w / 2, h / 2);
   player.display();
   player.move();
@@ -83,6 +84,11 @@ function level1MouseClicked() {
   }
 }
 
+function youWinMouseClicked() {
+  state = 'level 1';
+  points = 0;
+}
+
 function youWin() {
   background(255, 90, 100);
   textSize(80);
@@ -93,7 +99,3 @@ function youWin() {
 
 }
 
-function youWinMouseClicked() {
-  state = 'level 1';
-  points = 0;
-}
